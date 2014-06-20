@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+<head>
+	<title>Be Patient</title>
+	<link rel="Stylesheet" href="styles/reset.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+ 
+	<script type="text/javascript">
+
+$(document).ready(function(){
+				$("#slideshow > div:gt(0)").hide();
+
+				setInterval(function() { 
+				  $('#slideshow > div:first')
+				    .fadeOut(1000)
+				    .next()
+				    .fadeIn(1000)
+				    .end()
+				    .appendTo('#slideshow');
+				},  3000);
+});				
+
+
+	</script>
+	<style>
+
+	
+	header{ 
+		position: relative;
+		top:0px;
+		height: 50px;
+		width:100%;
+		border:1px solid #169f84;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		background-color: #1abc9c;
+		color:white;
+	}
+	#mainBox{
+		
+		height: 275px;
+		width:90%;
+		position:relative;
+		left:5%;
+		margin-top: 20px;
+		background-color: #F5F3F3;
+		border-radius: 20px;
+
+	}
+	h3{
+		position: relative;
+		top: 15px;
+		left:50px;
+		font-size: 20px;
+	}
+	h3:hover{
+		cursor: pointer;
+		color: #F5F3F3;
+	}
+	
+	ul li{
+		position: relative;
+		display: inline-block;
+		left:80%;
+		padding: 10px;
+		bottom: 13px;
+
+	}
+	ul li:hover{
+		cursor: pointer;
+		color: black;
+	}
+
+	#about1, #about2, #about3{
+		height: 600px;
+		width: 28%;
+		background-color: #F5F3F3;
+		border-radius: 20px;
+		float:left;
+		margin:20px;
+		position:relative;
+		left:40px;
+		line-height: 25px;
+	}
+
+	#doctor{
+	
+		position: relative;
+		width:500px;
+		height: 240px;
+		left:8%;
+		
+		border-radius: 15px;
+	}
+	#doctor1{
+		
+		position: relative;
+		width:500px;
+		height: 240px;
+		left:8%;
+		
+		border-radius: 15px;
+	}
+	#doctor2{
+		position: relative;
+		width:500px;
+		height: 240px;
+		left:8%;
+		border-radius: 15px;
+	}
+
+	#slideshow { 
+
+    position: absolute; 
+    width: 600px; 
+    height: 240px; 
+    padding: 10px; 
+    margin-left: 250px;
+    margin-top: 7px;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}
+
+#slideshow > div { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
+    bottom: 10px; 
+}
+
+#about{
+		width:90%;
+		position:relative;
+		left:5%;
+		margin-top: 30px;
+		background-color: #F5F3F3;
+		border-radius: 20px;
+		height:60px;
+		text-align: center;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+		font-size: 30px;
+
+}
+#about h2{
+	position: relative;
+	top:15px;
+}
+p{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	letter-spacing: .5px;
+	margin: 20px;
+
+}
+
+#logos {
+	width:100%;
+	height: 55px;
+	margin-left: auto; 
+	margin-right: auto;
+	margin-top: 368px;
+	left: 0;
+	right: 0;
+	float: right;
+/*	border: 1px red solid;*/
+	position: relative;
+	background-color: rgba(0,0,0,0.2);
+}
+
+#contact {
+	list-style: none;
+	width: 500px;
+	/*border: black 2px solid;*/
+	position: relative;
+	margin: auto;
+	right: 0px;
+	left: 0px;
+}
+
+#contact li {
+	position: relative;
+	display: inline-block;
+	margin-left: 80px;
+	margin-top: 8px;
+	left: 9px;
+}
+
+#contact img {
+	display: block;
+	width: 40px;
+	height: 40px;
+	margin: 3px;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+li a {
+	text-decoration: none;
+	color: white;
+}
+</style>
+</head>
+<body>
+	<header>
+	<h3>BePatient</h3>
+
+	<ul>
+		<li><a href="/home">Home</a></li>
+		<li><a href="/about">About</a></li>
+		<li><a href="/signin">Sign In</a></li>
+	</ul>	
+		
+	</header>
+	<div id="about">
+		<h2>About</h2>
+	</div>
+
+	<div id="mainBox">
+		<div id="slideshow">
+			<div>
+			<img id="doctor"src="images/doctor.jpg" alt="doctor">
+			</div>
+			<div>
+			<img id="doctor1"src="images/doctor1.jpg" alt="doctor">
+			</div>
+			<div>
+			<img id="doctor2"src="images/doctor2.jpg" alt="doctor">
+			</div>
+		</div>	
+		
+	</div>
+
+	<div id="about1">
+
+	 <p>Our Mission is to bring affordable and quality health services to under-served populations by connecting patients to doctors through mobile technologies and community-based health providers to achieve continuous heathcare delivery to patients.</p>
+
+
+	</div>
+	<div id="about2">
+	  <p>We are world-class medical professionals, public health practitioners, technologists, development activists, entrepreneurs, and business strategists  to bring new dimensions to addressing these challenges using mobile phones. As mobile phone coverage extends to all corners of the world, mobile-phone based health services are becoming increasingly ubiquitous for connecting different layers of the public health infrastructure, enabling real-time collection of health data and remote diagnosis of patients by medical experts.</p>
+	</div>
+	<div id="about3">
+	<p>Our innovative mobile health (mHealth) platform connects health service providers, reduces cost of service delivery, and optimally utilizes tiers of existing health system for patient care. A community health-worker or a clinic nurse with a Click-enabled mobile phone is able to act as the primary agent for service delivery, as she is connected to the mHealth platform and the entire health system.</p>
+
+	</div>
+	<div id="logos">
+			<ul id="contact">
+				<li><a href="mailto:victorwang920@gmail.com" target="blank"><img src="images/email.png"></a></li>
+				<li><a href="https://www.linkedin.com/pub/victor-wang/53/907/148" target="blank"><img src="images/linkedin.png"></a></li>
+				<li><a href="https://www.facebook.com/victor.wang.372" target="blank"><img src="images/fb.png"></a></li>
+			</ul>
+		</div>
+
+</body>
+</html>

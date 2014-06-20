@@ -18,10 +18,9 @@ end
 
 
 	def send_message(from, body)
-		puts "Thank you for the feedback!"
 		m = Mandrill::API.new
 		message = {
-			:subject=> "New Message Received",
+			:subject=> "Contact Form",
 			:from_name=> "Saamahn Mahjouri",
 			:text=>body,
 		:to=>[
@@ -43,12 +42,20 @@ end
 		erb :contact
 	end
 
+	get '/signout' do
+		@title = "Signout Page"
+		erb :signout
+	end
+
+	get '/signin' do
+		@title = "Signin Page"
+		erb :signin
+	end
+
 	post '/response' do
 		@title = "Feedback Page"
-		send_message("mahjouri.saamahn@gmail.com","Hi there!")
+		send_message("mahjouri.saamahn@gmail.com","Thanks for the feedback!")
 		erb :response
 		# redirect to("/contact")
 	end
-
-
 	

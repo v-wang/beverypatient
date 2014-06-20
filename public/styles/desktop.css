@@ -17,9 +17,10 @@ header{
 header h3{
 	position: absolute;
 	top: 15px;
-	left:50px;
+	left:40px;
 	font-size: 20px;
 }
+
 header h3:hover{
 	cursor: pointer;
 	color: #F5F3F3;
@@ -358,6 +359,8 @@ header h1{
 li a {
 	text-decoration: none;
 	color: white;
+	position: relative;
+	right: 15px;
 }
 
 

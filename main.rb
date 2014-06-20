@@ -42,20 +42,12 @@ end
 		erb :contact
 	end
 
-	get '/signout' do
-		@title = "Signout Page"
-		erb :signout
-	end
 
-	get '/signin' do
-		@title = "Signin Page"
-		erb :signin
-	end
 
 	post '/response' do
 		@title = "Feedback Page"
-		send_message("mahjouri.saamahn@gmail.com","Thanks for the feedback!")
+		send_message("default@default.com","Thanks for the feedback!")
 		erb :response
-		# redirect to("/contact")
+		redirect to('/profile')
 	end
 	

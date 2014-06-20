@@ -9,5 +9,3 @@ gem 'haml'
 gem 'activerecord'
 gem 'sinatra-activerecord'
 gem 'rake'
-
-
